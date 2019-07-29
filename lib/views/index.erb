@@ -1,0 +1,20 @@
+<html>
+
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+
+  <body>
+    <h1>Bienvenue sur la liste des potins! </h1>
+    <h2>Voici la liste actuelle</h2>
+
+	<% gossips.each_with_index do |gossip,id| %>
+        <p>
+          <a href="/gossips/show/<%=id %>"><%= id%>. Potin de <%= gossip.author %></a>
+        </p>
+      <% end %>
+
+    <h2>Tu peux en créer des nouveaux en allant sur <a href="/gossips/new/">new_gossip</a></h2>
+
+  </body>
+</html>
